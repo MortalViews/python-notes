@@ -3,7 +3,8 @@ from  pprint import pprint
     
 def send_sms(student,msg):
     """awesome code to send sms"""
-    phone = student['phone']
+    phone = student.phone 
+    
     print("sms send to num",msg,"---",phone)
 
 def payment_gateway(card,amount):
@@ -13,11 +14,6 @@ def payment_gateway(card,amount):
     status = random.choice(status)
     return status
 
-
-def add_student_to_course(course,student):
-    course['students'].append(student)
-    
-    
     
 def enroll_student(course,student):
 #     pay the fees
@@ -27,7 +23,7 @@ def enroll_student(course,student):
    
     status = payment_gateway(card, fee)
     if status=='SUCCESS':
-        add_student_to_course(course, student)
+        course.add_student(student)
         
         print('welcome onboard')
         
@@ -37,6 +33,6 @@ def enroll_student(course,student):
         
 def notify_student(course,msg):
     
-    for student in course['students']:
+    for student in course.students:
 #         phonenumber = student['phone']
         send_sms(student, msg)

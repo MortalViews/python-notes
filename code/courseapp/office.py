@@ -1,32 +1,28 @@
 from pprint import pprint
 
 
-from student import student1
-
-
-
-from course import course1
-
-
+from student import students 
 from enrolapp import enroll_student
+from entity import Student,Course
+from enrolapp import notify_student
 
-from enrolapp import send_sms
+aws_course = Course(name='aws_101',
+                    faculty='john',
+                    room='1A',
+                    time='7.30',
+                    fees='1000')
 
-enroll_student(course1,student1)
+for s_details in students: 
+    
+    student = Student(**s_details)
+    
+    aws_course.add_student(student)
 
 
+pprint(aws_course.students)
 
-# 
-# 
-# msg="he is late again!"
-# 
-# students = course1['students']
-# 
-# for student in students:
-#     phone_numer = student['phone']
-#     send_sms(phone_numer,msg)
-#     
 
+notify_student(aws_course,'The class starts in 5')
 
 
 

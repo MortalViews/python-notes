@@ -1,17 +1,20 @@
-course1 = {
-    'name':'aws 101',
-    'faculty':'john',
-    'room':'1A',
-    'time':'7.30',
-    'students':[],
-    'fees':'1000'
-    }    
-course2 = {
-    'name':'python 101',
-    'faculty':'sanjay',
-    'room':'1A',
-    'time':'7.30',
-    'students':[],
-    'fees':'1000'
-    }
 
+    
+
+aws_course = Course(name='aws_101',
+                    faculty='john',
+                    room='1A',
+                    time='7.30',
+                    fees='1000'
+                    )
+python_course = Course(name='python_101',
+                    faculty='sanjay',
+                    room='2A',
+                    time='7.30',
+                    fees='1000'
+                    )
+
+print(aws_course)
+print(aws_course.name)
+print(python_course)
+print(python_course.name)
