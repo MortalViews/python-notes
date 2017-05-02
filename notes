@@ -1,0 +1,45 @@
+Namespace:
+1.) mapping from names to object 
+when are they created and lifetime:
+1.) buildin names: created: interpreter starts, and never deleted
+2.) global namespace of a module: created when it is read, also normally lasts till the interpreter exists. 
+3.) local namespace of a funcion: created when called, deleted on return/exception 
+4.) recursive call will have their own namespace 
+	 
+	
+
+Scope: 
+Textual region in a python code, where namesapce is 'directly' accessible. 
+
+
+
+Blocks: 
+1.) module 
+2.) function body
+3.) class defination 
+--- 
+input to exec, eval 
+
+
+name binding:
+1.) paramenters to functions
+2.) import statements 
+3.) class and function definitions
+4.) targets in an assigment 
+5.) for loop headers 
+6.) as in a with 
+7.) except clause 
+
+free variables: 
+1.) used in a block, but not defined there 
+
+def hello():
+  a = 10
+  return a+i 
+
+
+
+
+
+Name resolution of free variables occurs at runtime, not compile time. 
+
