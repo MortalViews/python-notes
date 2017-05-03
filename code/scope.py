@@ -1,3 +1,7 @@
+# Local scope 
+# Enclosed Scope 
+# GLobal 
+# Buidin
 
 name = 'test'
 test = 'python'
@@ -9,17 +13,20 @@ def printr():
 def func():
     test = 'aws'
     def func1():
-        
+        def len():
+            prin('len called')
         def func2():
             print(test)
             print(name)
             print(len)
             
         return func2 
-    
+        func2()
     return func1
 
-t = func()
-a = t()
-b = a()
+func1 = func()
+func2 = func1()
+
+
+b = func2()
 print(b)
