@@ -1,6 +1,11 @@
 def cap_print(*names):
-    print(type(names))
-    print(names)
+    n = []  
+    for i in names:
+        i.upper()
+        n.append(i)
+    
+    return tuple(n)
+    
 #     return a1.upper()
 
 def title_print(name):
@@ -18,7 +23,10 @@ a = test1(cap_print)
 b = test1(title_print)
 
 a1 = a('sanjay','deepkar')
+print(a1)
 
+print(a('sanjay'))
+print(a('te','t','a'))
 
 
 
