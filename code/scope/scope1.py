@@ -14,8 +14,12 @@ def test(x):
         print(name)
         
     return test1,print_name 
-   
-t,print_t = test('ajay')
+
+
+
+
+rv = test('ajay') 
+# t,print_t = test('ajay')
 
 print_t()
 x = t('deepak')
