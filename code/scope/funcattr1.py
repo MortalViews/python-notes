@@ -1,16 +1,8 @@
 class A:
-    def calculate_commission(self,amount,percent=None):
-        if not percent: 
-            percent = self.percent
-        return (percent*amount)/100
-     
-def x(percent,age =80, score=10):
-    if age > 100:
-        if score == 10:
-            percent = percent/5
-            
-    percent = age/10
-    return percent
+    def __init__(self,name1):
+        self.name = name1
+        
+
 
 class B(A):
     
@@ -19,19 +11,7 @@ class B(A):
     def c(self,percent):
         self.percent = percent
     
-agent= B(3)
-worker = B()
-amount = 100
-agent.c(14)
 
-x.percent = 12
-x.name = 'tododod'
-# x(10)
+b = B()
 
-print(A.calculate_commission(x, amount))
-
-
-print(agent.calculate_commission(amount))
-
-
-
+print(b.__init__)

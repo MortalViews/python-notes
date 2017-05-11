@@ -1,29 +1,31 @@
-import time
-import datetime 
-
-def benchmark(func):
-    start = datetime.datetime.now()
-    func()
-    end = datetime.datetime.now()
-    exec_time = (end- start).total_seconds()
-    print('executing_really_complex',int(exec_time))
-
-def test1():
-#some complex process
-    time.sleep(2)
-    test2()
-    test2()
-def test2():
-    #some complex process
-    time.sleep(3)
-def test3():
-    t = T()
-    t.really_complex()
+import time 
+import threading
+from threading import Thread
+import random
+import types
+def random_sleep():
+    return random.randint(1,5)
+def mock_long_task(msg,sleep=2,nums=5):
+    print(msg)
+    ct = threading.current_thread().name
+    s =  (lambda : sleep())if hasattr(sleep,'__call__') else (lambda : sleep)
+    while nums > 0:
+        r = s()
+        print(msg+'...time left..'+str(r)+"..."+str(nums)+ct)
+        time.sleep(r)
+        nums=nums-1
+class MockPaymentGateway:
+    def __init__(self,msg):
+        pass 
     
-class T:
-    def really_complex(self):
-        time.sleep(4)
-        
-benchmark(test1)
-test1()
-test2()
+class PaymentGateway():
+    def make_payment(self,sleep=2,nums=5):
+        mock_long_task("making..payment..",nums,sleep=sleep)
+        print("..making payment")
+        time.sleep(3)
+t = PaymentGateway()
+th1 = threading.Thread(target=t.make_payment)
+th2 = threading.Thread(target=t.make_payment,kwargs={'sleep':random_sleep})
+th1.start()
+th2.start()
+

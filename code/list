@@ -1,0 +1,82 @@
+module :
+- is it a object 
+- attributes of module / print the dict 
+- what is a module name 
+- how to import a module 
+- from statemnt, from x import y as x etc 
+- global scope 
+
+numbers - types 
+sequences- types 
+mapping - types 
+set - types 
+
+operations you can perform on all for of them. 
+dict,list,set methods. 
+what is inplace modification 
+
+
+name binding: 
+	when does it happen:
+	- paramenters to functions
+	- import statements 
+	- class and function definitions
+	- targets in an assigment 
+	- for loop headers 
+	- as in a with []
+	- except clause []
+
+list/tuple unpacking 
+
+if else statement 
+for loop
+while loop  
+looping thorough items in a list/dict/tuple 
+differnet ways of looping 
+
+sorting list/dictionary 
+- differnet ways
+
+dict keys, items etc 
+ 
+
+ 
+function
+	 - def
+	 - arguments 
+	 - function object 
+	 - function body 
+	 - calling/execucting a function
+	 - return statement 
+	 - argument passing keywords/positional 
+	 - how they are passed, how they are recieved. 
+	 - possible error encounted in argument passing 
+
+class: 
+	- def 
+	- class body
+	- when is it executed. 
+	- how to create object 
+	- class __dict__
+	- object __dict__ 
+	- class attributes, and object attributes. 
+	- classmethod, and instance/object method 
+	- how the class functions can be called in different ways 
+	- __init__ 
+	
+
+everythign is an object 
+nested function and scope LEGB 
+
+
+scope of variables created in for/while and if loop 
+
+iterator/iterable 
+
+
+
+
+
+ 
+
+	 
