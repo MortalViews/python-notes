@@ -50,7 +50,7 @@ function
 	 - return statement 
 	 - argument passing keywords/positional 
 	 - how they are passed, how they are recieved. 
-	 - possible error encounted in argument passing 
+	 - possible error encountered in argument passing 
 
 class: 
 	- def 
@@ -71,7 +71,47 @@ nested function and scope LEGB
 
 scope of variables created in for/while and if loop 
 
-iterator/iterable 
+
+
+================
+exceptions 
+break/continue 
+
+
+file handling 
+
+sorting [ in depth]
+
+
+string formatting 
+
+iterator/iterable [sorting indepth]
+
+decorators 
+operator overloding 
+multiple inheritence 
+descriptors 
+__getattribute__ etc 
+
+
+data structures: 
+--- stack, queue 
+
+---------------------------------
+core lib: 
+collections [imp]
+datetime 
+os 
+sys 
+random 
+functools 
+itertools 
+
+regex 
+
+multithreading 
+multiprocessing 
+asyn
 
 
 

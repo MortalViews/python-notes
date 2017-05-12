@@ -49,6 +49,6 @@ class VisaPaymentGateway(MockTask):
         self.msg = "vis payment...running."
         
     def step(seconds,nums):
-pp        print(self.msg+" ...nums "+ nums+"id: "+self.id)
+       print(self.msg+" ...nums "+ nums+"id: "+self.id)
         
     
