@@ -18,9 +18,10 @@ class Segment:
                         +(self.end.y - self.start.y)**2))
         
     def mid(self):
-#         TODO: return the mid point
-        pass 
-
+        xm = (self.end.x+self.start.x)/2
+        ym = (self.end.y+self.start.y)/2
+        return Point(xm,ym)
+    
     def __str__(self):
         return "(%s)-->(%s)"%(self.start,self.end)
     def __repr__(self):
