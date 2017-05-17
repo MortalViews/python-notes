@@ -5,9 +5,12 @@ class Point:
         self.y = y 
     def __str__(self):
         return "<POINT: x=%d, y=%d>"%(self.x,self.y)
+                
 
-    def __repr__(self):
-        return self.__str__()
+            
+ 
+#     def __repr__(self):
+#         return self.__str__()
     
 class Segment:
     def __init__(self,start,end):
@@ -23,9 +26,9 @@ class Segment:
         return Point(xm,ym)
     
     def __str__(self):
-        return "(%s)-->(%s)"%(self.start,self.end)
-    def __repr__(self):
-        return self.__str__()
+        return "<Segment: (%s)-->(%s)>"%(self.start,self.end)
+#     def __repr__(self):
+#         return self.__str__()
     
 class Rectangle:
     def __init__(self,*points):
@@ -37,14 +40,14 @@ class Rectangle:
         
     def _caculate_sides(self):
         s1 = Segment(*self.points[:2])
+        print(type(s1))
+        print(s1)
         s2 = Segment(*self.points[1:3])
         s3 = Segment(*self.points[2:4])
         s4 = Segment(*self.points[::-3])
         return s1,s2,s3,s4
     def area(self):
         return len(self.sides[0])*len(self.sides[1])
-    
-    
     
 
     def __str__(self):
@@ -55,8 +58,9 @@ b = Point(1,5)
 c = Point(10,5)
 d = Point(10,2)
 points= (a,b,c,d)
+print(points)
 if __name__ == '__main__':
-    r = Rectangle(a,b,c,d,c)
+    r = Rectangle(a,b,c,d)
     print(str(r))
     print(r.area())
         
