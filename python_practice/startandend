@@ -1,0 +1,99 @@
+#!/usr/bin/python
+'''
+['_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+str1='string'
+l=dir(str1)
+#print l
+n=[]
+for i in l:
+  #print i
+  if  i.startswith("__") and i.endswith("__"):
+   pass
+  else:
+   n.append(i)
+print n 
+
+
+str1='this is {0} to {three} find the usage{1} of find function'
+#print str1.format(1,2, three='third')
+print str1.index('to',13)
+#print str1.find('to')
+
+
+str1='this is new string'
+str2="this2000 is"
+str3="this2000is"
+print str1.isalnum()
+print str2.isalnum()
+print str3.isalnum()
+
+
+
+str1='this is new string'
+str2="this2000 is"
+str3="thisis"
+print str1.isalpha()
+print str2.isalpha()
+print str3.isalpha()
+
+
+
+str1='this is new string'
+str2="2000"
+str3="thisis"
+print str1.isdigit()
+print str2.isdigit()
+print str3.isdigit()
+
+
+str1='this is new string'
+str2="2000"
+str3="Thisis"
+print str1.islower()
+print str2.islower()
+print str3.islower()
+
+
+str1='this is new string'
+str2="2000"
+str3=" "
+print str1.isspace()
+print str2.isspace()
+print str3.isspace()
+
+
+str1='this is new string'
+str2="2000"
+str3=" "
+print str1.istitle()
+print str2.istitle()
+print str3.istitle()
+
+
+str = "This Is String Example...Wow!!!";
+print str.istitle()
+
+str = "This is string example....wow!!!";
+print str.istitle()
+
+str1='this is new string'
+str2="2000"
+str3="THIS IS"
+print str1.isupper()
+print str2.isupper()
+print str3.isupper()
+
+'''
+
+str1='this'
+str2='is'
+print str1.join(str2)
+
+s = "-";
+seq = ("a", "b", "c"); # This is sequence of strings.
+print s.join( seq )
+s = "-";
+seq = ("ac"); # This is sequence of strings.
+print s.join( seq )
+   

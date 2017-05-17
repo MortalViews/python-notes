@@ -1,0 +1,21 @@
+#!/usr/bin/python
+'''string="this is \n new line\n ends with\nand"
+string1="this is  new line ends withand"
+print string.splitlines()
+print string.capitalize()
+print string.count("i")
+print string1.center(100)
+str1=string.encode('base64','strict')
+print str1
+print str1.decode('base64','strict')
+print string.endswith('s')'''
+
+str = "this is string example....wow!!!";
+
+suffix = "wow!!!";
+print str.endswith(suffix)
+print str.endswith(suffix,20)
+
+suffix = "is ";
+print str.startswith(suffix)
+print str.startswith(suffix, 2, 5)
