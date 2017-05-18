@@ -1,2 +1,2 @@
-## Welcome to Python Notes
+## Welcome to Python Noes
 
