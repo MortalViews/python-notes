@@ -53,14 +53,14 @@ class Rectangle:
     def __str__(self):
         return "sides ({}),{},{},{}".format(*self.sides)
 
-a = Point(1,2)
-b = Point(1,5)
-c = Point(10,5)
-d = Point(10,2)
-points= (a,b,c,d)
-print(points)
 if __name__ == '__main__':
+    a = Point(1,2)
+    b = Point(1,5)
+    c = Point(10,5)
+    d = Point(10,2)
+    points= (a,b,c,d)
+    print(points)
     r = Rectangle(a,b,c,d)
     print(str(r))
     print(r.area())
-        
+    
