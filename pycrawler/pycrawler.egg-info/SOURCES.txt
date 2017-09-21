@@ -1,0 +1,7 @@
+pycrawler/__init__.py
+pycrawler.egg-info/PKG-INFO
+pycrawler.egg-info/SOURCES.txt
+pycrawler.egg-info/dependency_links.txt
+pycrawler.egg-info/entry_points.txt
+pycrawler.egg-info/not-zip-safe
+pycrawler.egg-info/top_level.txt

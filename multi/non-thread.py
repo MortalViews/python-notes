@@ -1,6 +1,6 @@
 from  urllib import request
 from threading import Thread
-timeout = 60
+timeout = 20
 import time 
 start_time= time.time()
 print('start_time',start_time)
@@ -16,22 +16,15 @@ URLS = ['http://www.foxnews.com/',
         ]
 
 
+
 def download(url):
     print('donwloading:',url)
-    s=time.time()
     with request.urlopen(url,timeout=timeout) as response:
         html = response.read()
-        print(url,len(html))
-        print("IN",time.time()-s)
+        print(url,'donwloaded-len: ',len(html))
         
-threads = []      
 for url in URLS:
-    t = Thread(target=download,kwargs={'url':url})
-    t.start()
-    threads.append(t)
-
-for t in threads:    
-    t.join()
+    download(url)
 
 end_time = time.time()
 

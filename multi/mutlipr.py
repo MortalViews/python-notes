@@ -1,5 +1,5 @@
 from  urllib import request
-from threading import Thread
+from multiprocessing import Process
 timeout = 60
 import time 
 start_time= time.time()
@@ -15,18 +15,16 @@ URLS = ['http://www.foxnews.com/',
         'http://europe.wsj.com/'
         ]
 
-
 def download(url):
     print('donwloading:',url)
-    s=time.time()
+    s = time.time()
     with request.urlopen(url,timeout=timeout) as response:
         html = response.read()
         print(url,len(html))
         print("IN",time.time()-s)
-        
 threads = []      
 for url in URLS:
-    t = Thread(target=download,kwargs={'url':url})
+    t = Process(target=download,kwargs={'url':url})
     t.start()
     threads.append(t)
 
